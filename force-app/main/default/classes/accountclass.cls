@@ -1,6 +1,9 @@
 public with sharing class accountclass {
     public static void copiarDireccion(List<Account> listAcc) 
     {
+        
+        /*Soy Diego*/
+
         for(integer i=0;i < listAcc.size();i++)
         {
             listAcc[i].ShippingCountry = listAcc[i].BillingCountry;
