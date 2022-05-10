@@ -5,10 +5,13 @@ public with sharing class accountclass {
         //Power
         for(integer i=0;i < listAcc.size();i++)
         {
-            listAcc[i].ShippingCountry = listAcc[i].BillingCountry;
-            listAcc[i].ShippingCity = listAcc[i].BillingCity;
-            listAcc[i].ShippingState = listAcc[i].BillingState;
-            listAcc[i].ShippingStreet = listAcc[i].BillingStreet;  
+            if(listAcc[i].BillingAddress != null)
+            {
+                listAcc[i].ShippingCountry = listAcc[i].BillingCountry;
+                listAcc[i].ShippingCity = listAcc[i].BillingCity;
+                listAcc[i].ShippingState = listAcc[i].BillingState;
+                listAcc[i].ShippingStreet = listAcc[i].BillingStreet;  
+            }
         }
     }
 }
