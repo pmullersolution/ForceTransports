@@ -1,14 +1,9 @@
-public with sharing class singletonClassGabriel {
-
-    public singletonClassGabriel(){
-        
-    }
-
-    private static singletonClassGabriel() {
-        System.debug('Hola, soy Gabriel Sosa');
+public with sharing class singletonClassGabriel{
+    private void singletonClassGabriel(){
     }
 
     public void getGabriel(){
-        singletonClassGabriel();
+        System.debug('Hola, soy Gabriel Sosa');
     }
+
 }
