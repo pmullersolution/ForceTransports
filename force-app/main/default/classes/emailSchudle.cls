@@ -3,11 +3,13 @@ global class emailSchudle implements Schedulable {
     Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
     String[] toAddresses = new String[] {'sergio.baca@me.com'};
 
+
     global void emailSchudle(SchedulableContext SC) {
 
         Integer mes = DATE.MONTH();
         Integer dia = DATE.DAY();
 
+        System.debug(dia,mes);
         for (Contact a : [SELECT email FROM Contact where dia = 'a.dia__c' AND mes = 'a.mes__c']) {
            
             mail.setToAddresses(a.email);
