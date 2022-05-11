@@ -1,5 +1,7 @@
 trigger accounttgr on Account (before insert, before update) 
 {
     accountclass.copiarDireccion(trigger.new);
-    accountClassFuture.myFuture(trigger.new[0].Id);
+    string jsonSend = JSON.serialize(trigger.new);
+    System.debug(jsonSend);
+    accountClassFuture.myFuture(jsonSend);
 }

@@ -1,16 +1,19 @@
 global class accountClassFuture 
 {
     @future
-    public static void myFuture(id IdCliente)
+    public static void myFuture(String IdCliente)
     {
-        for(Account Acclist : [Select id, Name From Account where id = :IdCliente])
+        list<Messaging.SingleEmailMessage> mess = new List<Messaging.SingleEmailMessage>();
+        String[] toAddresses = new String[] {'sergio.baca@me.com'}; 
+        
+        for(Account Acclist : (List<Account>) JSON.deserialize(IdCliente, List<Account>.class))
         {
             Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-            String[] toAddresses = new String[] {'sergio.baca@me.com'}; 
             mail.setToAddresses(toAddresses);
             mail.setSubject('Hola Sergio, se creo el cliente '+Acclist.name);
             mail.setPlainTextBody('Me gusta apex por facil');
-            Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
+            mess.add(mail);
         }
+        Messaging.sendEmail( mess);
     }
 }
