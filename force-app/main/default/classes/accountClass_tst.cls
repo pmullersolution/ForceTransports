@@ -5,10 +5,19 @@ public class accountClass_tst
     static void makeData()
     {
         List<Account> listAcct = new List<Account>();
+<<<<<<< HEAD
         for(integer i =0;i <=200;i++)
         {
             listAcct.add(new account(name = 'cliente prueba '+i, BillingCountry= 'Argentina', BillingCity='Mendoza', BillingState = 'Mendoza '+i));
         }   
+=======
+        for(integer i =0;i <=5;i++)
+        {
+            listAcct.add(new account(name = 'cliente prueba '+i, BillingCountry= 'Argentina', BillingCity='Mendoza', BillingState = 'Mendoza '+i));
+        }   
+
+        //
+>>>>>>> 845c5fce3fc192b7ae867def38db84d750df069d
         system.debug(listAcct);
         Database.insert(listAcct);
     }
@@ -40,4 +49,8 @@ public class accountClass_tst
         //Llamar a clase para prueba
         accountclass.copiarDireccion(accs);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 845c5fce3fc192b7ae867def38db84d750df069d
