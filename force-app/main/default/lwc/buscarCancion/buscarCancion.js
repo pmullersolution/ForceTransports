@@ -15,7 +15,6 @@ export default class BuscarCancion extends LightningElement {
 
     handleClick(event) {
         this.letra = this.artista + ' ' + this.cancion;
-        this.template.querySelector(".input").value = this.letra;
     }
 
 }
