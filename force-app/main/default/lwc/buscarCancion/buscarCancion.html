@@ -1,0 +1,24 @@
+<template>
+    <lightning-card  title="Hello" class="sdls-p">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col">
+                <span><lightning-input type="text" label="Artista" onchange={hanldeArtistChange} id="artist"></lightning-input></span>
+            </div>
+            <div class="slds-col">
+                <span><lightning-input type="text" label="Cancion" onchange={hanldeCancionChange} id="song"></lightning-input></span>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                <span><lightning-input type="text" label="Letra" disabled="true"></lightning-input></span>
+                </div>
+        </div>
+    </br>
+    </br>
+        <div class="slds-grid slds-gutters sdls-align-right">
+            <div class="slds-col ">
+                <lightning-button variant="brand" label="Buscar" title="Buscar" onclick={handleClick} class="sdls-float_right"> </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
