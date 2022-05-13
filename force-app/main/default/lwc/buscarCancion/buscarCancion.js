@@ -1,27 +1,21 @@
 import { LightningElement, track } from 'lwc';
-
-
+import fetchDataHelper from './fetchDataHelper';
 
 export default class BuscarCancion extends LightningElement {
     @track artista;
     @track cancion;
     @track letra;
-    
 
-    hanldeArtistChange(event){
+    handleArtistaChange(event) {
         this.artista = event.target.value;
-
     }
-    hanldeCancionChange(event){
+
+    handleCancionChange(event) {
         this.cancion = event.target.value;
-        
-    }
-    hanldeClick(event){
-        //this.letra = this.artista+' '+this.cancion;
-        //this.template.querySelector(".input")
-        
     }
 
-
+    handleClick(event) {
+        this.letra = fetchDataHelper(this.artista, this.cancion);
+    }
 
 }
