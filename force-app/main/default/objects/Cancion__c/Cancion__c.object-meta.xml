@@ -143,32 +143,24 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>true</enableActivities>
+    <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>true</enableHistory>
+    <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
-    <enableReports>true</enableReports>
+    <enableReports>false</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-<<<<<<< HEAD
-    <gender>Masculine</gender>
-=======
     <gender>Feminine</gender>
->>>>>>> 4bf7096c670208e543e76815b116def26262e037
-    <label>Suma</label>
+    <label>Cancion</label>
     <nameField>
-        <label>Suma Name</label>
-        <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <displayFormat>CAN-{0000}</displayFormat>
+        <label>Cancion Name</label>
+        <type>AutoNumber</type>
     </nameField>
-<<<<<<< HEAD
-    <pluralLabel>sumas</pluralLabel>
-=======
-    <pluralLabel>Sumas</pluralLabel>
->>>>>>> 4bf7096c670208e543e76815b116def26262e037
+    <pluralLabel>Canciones</pluralLabel>
     <searchLayouts></searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
