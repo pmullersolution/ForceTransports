@@ -1,4 +1,5 @@
 import { LightningElement, track } from 'lwc';
+import fetchDataHelper from './fetchDataHelper';
 
 export default class BuscarCancion extends LightningElement {
     @track artista;
@@ -14,7 +15,7 @@ export default class BuscarCancion extends LightningElement {
     }
 
     handleClick(event) {
-        this.letra = this.artista + ' ' + this.cancion;
+        this.letra = fetchDataHelper(this.artista, this.cancion);
     }
 
 }
