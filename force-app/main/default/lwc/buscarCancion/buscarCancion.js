@@ -20,7 +20,7 @@ export default class BuscarCancion extends LightningElement {
         const data = await fetchDataHelper(this.artista, this.cancion);
         this.letra = JSON.stringify(data.lyrics);
         await setSongSync({ autor: this.artista, cancion: this.cancion, letra: this.letra });
-        this.showToast();
+        alert('Funciono!!!!!!!!');
     }
 
     showToast() {
