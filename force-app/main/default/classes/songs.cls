@@ -6,8 +6,8 @@ public class songs {
         SongsC s = getSongSync(autor, cancion, IdCancion, true);
     }
     
-    
-    public static songsC getSongSync(String autor, String cancion, id IdCancion, Boolean act)
+    @AuraEnabled(cacheable=true)
+    public static songsC getSongSync(String autor, String cancion, String IdCancion, Boolean act)
     {
         songsC s = new songsC();
         
@@ -25,10 +25,9 @@ public class songs {
 
         s = (songsC) JSON.deserializeStrict(respuesta, songsC.class);
 
-        Cancion__c cancionObj = new Cancion__c(Id = IdCancion, letra__c = s.lyrics);
-
         if(act)
         {
+            Cancion__c cancionObj = new Cancion__c(Id = IdCancion, letra__c = s.lyrics);
             update cancionObj;
         }
            
@@ -38,7 +37,7 @@ public class songs {
     }
 
     public class songsC{
-
+        @AuraEnabled()
 		  public String lyrics{get;set;}
     
     }
