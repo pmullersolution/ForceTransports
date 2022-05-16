@@ -14,8 +14,10 @@ export default class BuscarCancion extends LightningElement {
         this.cancion = event.target.value;
     }
 
-    handleClick(event) {
-        this.letra = fetchDataHelper(this.artista, this.cancion);
+    async handleClick(event) {
+        const data = await fetchDataHelper(this.artista, this.cancion);
+        this.letra = JSON.stringify(data.lyrics);
+        debugger;
     }
 
 }
