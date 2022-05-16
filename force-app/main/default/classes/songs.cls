@@ -1,7 +1,13 @@
 public class songs {
-    
+
     @future(callout=true)
     public static void getSong(String autor, String cancion, id IdCancion)
+    {
+        SongsC s = getSongSync(autor, cancion, IdCancion, true);
+    }
+    
+    
+    public static songsC getSongSync(String autor, String cancion, id IdCancion, Boolean act)
     {
         songsC s = new songsC();
         
@@ -21,7 +27,13 @@ public class songs {
 
         Cancion__c cancionObj = new Cancion__c(Id = IdCancion, letra__c = s.lyrics);
 
-        update cancionObj;
+        if(act)
+        {
+            update cancionObj;
+        }
+           
+
+        return s;
 
     }
 
