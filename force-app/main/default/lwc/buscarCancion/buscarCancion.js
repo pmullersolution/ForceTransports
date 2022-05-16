@@ -23,7 +23,7 @@ export default class BuscarCancion extends LightningElement {
     }
 
     LlamarApex() {
-        getSongSync({ autor: '$artista', cancion: '$cancion', IdCancion: 'null', act: 'false' })
+        getSongSync({ autor: this.artista, cancion: this.cancion, IdCancion: 'null', act: 'false' })
             .then(result => {
                 this.letra = result;
             })

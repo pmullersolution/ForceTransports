@@ -3,11 +3,11 @@ public class songs {
     @future(callout=true)
     public static void getSong(String autor, String cancion, id IdCancion)
     {
-        SongsC s = getSongSync(autor, cancion, IdCancion, true);
+        String s = getSongSync(autor, cancion, IdCancion, true);
     }
     
     @AuraEnabled(cacheable=true)
-    public static songsC getSongSync(String autor, String cancion, String IdCancion, Boolean act)
+    public static string getSongSync(String autor, String cancion, String IdCancion, Boolean act)
     {
         songsC s = new songsC();
         
@@ -32,7 +32,7 @@ public class songs {
         }
            
 
-        return s;
+        return s.lyrics;
 
     }
 
