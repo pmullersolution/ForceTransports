@@ -1,20 +1,26 @@
 <template>
+
     <lightning-card  title="Buscador de letras Power Solutions">
+      <div style="background-image: url('https://i.ibb.co/sg7xP98/20755.jpg'); height:100vh; background-repeat: no-repeat;
+      background-size: cover;">
+
         <div class="slds-p-horizontal_medium">
           <div class="slds-grid slds-gutters">
-            <div class="slds-col">
+            <div class="slds-col" style="background-color: orange; border-radius:3rem">
                 <lightning-input type="text" label="Artista" onchange={handleArtistaChange}></lightning-input>
             </div>
-            <div class="slds-col">
+            <div class="slds-col" style="background-color: orange; border-radius:3rem">
                 <lightning-input type="text" label="Canción" onchange={handleCancionChange}></lightning-input>
             </div>
           </div>
           <div class="slds-grid slds-gutters">
-            <div class="slds-col">
-                <lightning-input type="text" label="Letra" disabled="true" value={letra}></lightning-input>
-            </div>
+            <div class="slds-col">              
+                <p class="letra"  style="text-align: center;padding: 10px;margin: 5px; background-color:white; font-size: 1.875em;">{letra}   
+                </p> 
+                
+              </div>
           </div>
-        </div>
+
         </br>
         </br>
           <div class="slds-grid slds-gutters">
@@ -22,5 +28,8 @@
                 <lightning-button variant="brand" label="Buscar" title="Buscar" onclick={handleClick} class="slds-m-left_x-small slds-float_right"></lightning-button>
             </div>
           </div>
+        </div>
+      </div>
     </lightning-card>
+
 </template>
