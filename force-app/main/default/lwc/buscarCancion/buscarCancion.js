@@ -1,6 +1,7 @@
 import { LightningElement, track, api } from 'lwc';
 import fetchDataHelper from './fetchDataHelper';
 import getSongSync from '@salesforce/apex/songs.getSongSync';
+import crearCancion from '@salesforce/apex/songs.crearCancion';
 
 export default class BuscarCancion extends LightningElement {
     @api artista;
@@ -26,9 +27,10 @@ export default class BuscarCancion extends LightningElement {
     }
 
     LlamarApex() {
-        getSongSync({ autor: '$artista', cancion: '$cancion', IdCancion: 'null', act: 'false' })
+        getSongSync({ autor: this.artista, cancion: this.cancion, IdCancion: 'null', act: 'false' })
             .then(result => {
                 this.letra = result;
+                crearCancion(JSON.stringify( this.artista, this.cancion, this.letra) );
             })
             .catch(error => {
                 this.error = error;
