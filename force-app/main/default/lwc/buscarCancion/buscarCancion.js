@@ -1,12 +1,11 @@
 import { LightningElement, track, api } from 'lwc';
 import fetchDataHelper from './fetchDataHelper';
-import getSongSync from '@salesforce/apex/songs.getSongSync';
-import crearCancion from '@salesforce/apex/songs.crearCancion';
+import setSongSync from '@salesforce/apex/songs.setSongSync';
 
 export default class BuscarCancion extends LightningElement {
     @api artista;
     @api cancion;
-    @track letra;
+    @api letra;
     @track error;
 
 
@@ -21,20 +20,19 @@ export default class BuscarCancion extends LightningElement {
 
     async handleClick(event) {
         const data = await fetchDataHelper(this.artista, this.cancion);
-        let letter = data.lyrics;
-        this.letra = letter;
-        debugger;
+        this.letra = JSON.stringify(data.lyrics);
+        await setSongSync({ autor: this.artista, cancion: this.cancion, letra: this.letra });
+        this.showToast();
     }
 
-    LlamarApex() {
-        getSongSync({ autor: this.artista, cancion: this.cancion, IdCancion: 'null', act: 'false' })
-            .then(result => {
-                this.letra = result;
-                crearCancion(JSON.stringify( this.artista, this.cancion, this.letra) );
-            })
-            .catch(error => {
-                this.error = error;
-            });
+    showToast() {
+        const event = new ShowToastEvent({
+            title: 'Exitoso',
+            message: 'Se inserto la canción',
+            variant: 'success',
+            mode: 'dismissable'
+        });
+        this.dispatchEvent(event);
     }
 
 }

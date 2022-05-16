@@ -37,11 +37,12 @@ public class songs {
     }
 
     @AuraEnabled
-    public static void crearCancion (String autor, String cancion, String letra){
-        cancion__c  c = new cancion__c(Artista__c = autor,cancion__c = cancion, letra__c =letra);
-        insert c;
-    }
+    public static void setSongSync(String autor, String cancion, String letra)
+    {
+        Cancion__c cancionObj = new Cancion__c(Artista__c = autor, Cancion__c = cancion, letra__c = letra);
+        insert cancionObj;
 
+    }
     public class songsC{
         @AuraEnabled()
 		  public String lyrics{get;set;}
