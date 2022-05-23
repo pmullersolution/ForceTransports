@@ -59,8 +59,8 @@ export default class CoreDocuments extends LightningElement {
         this.dispatchEvent(toastEvent)
     }
 
-    async refreshDataTable() {
-        await getDocuments({ idObject: this.recordId }).then(result => {
+    refreshDataTable() {
+        getDocuments({ idObject: this.recordId }).then(result => {
             this.data = data;
         })
     }
