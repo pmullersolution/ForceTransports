@@ -1,27 +1,4 @@
 <template>
-<<<<<<< HEAD
-    <div class="slds-m-top_medium slds-m-bottom_x-large">
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-            An input field with a file selector that accepts a single file.
-        </h2>
-
-        <div class="slds-p-around_medium lgc-bg">
-            <lightning-input type="file" label="Attachment"></lightning-input>
-        </div>
-    </div>
-
-    <div class="slds-m-top_medium slds-m-bottom_x-large">
-        <h2 class="slds-text-heading_medium slds-m-bottom_medium">
-            An input field with a file selector that accepts multiple files.
-        </h2>
-    </div>
-    <lightning-datatable
-                key-field="id"
-                data={data}
-                columns={columns}>
-    </lightning-datatable>
-    
-=======
     <lightning-card title="LWC upload Salesforce" icon-name="custom:custom14">
         <div class="slds-m-around_medium">
             <lightning-input type="file" 
@@ -31,9 +8,7 @@
         <template if:true={fileData}>
             <p>{fileData.filename}</p>
         </template>
-<lightning-button variant="brand" label="submit" title="Submit" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-<lightning-datatable key-field="id" data={data} columns={columns}>
-</lightning-datatable>
-</lightning-card>
->>>>>>> 7b2d01f6631165bdb2d742fb88375865087d82a6
+        <lightning-button variant="brand" label="submit" title="Submit" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-datatable key-field="id" data={data} columns={columns}></lightning-datatable>
+    </lightning-card>
 </template>
