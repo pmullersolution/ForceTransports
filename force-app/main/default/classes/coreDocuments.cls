@@ -22,6 +22,7 @@ public without sharing class coreDocuments
             if (cv == null || cdl == null) { return null; }
             return cdl.Id;
     }
+    
 
     private static ContentVersion createContentVersion(String base64, String filename) {
         ContentVersion cv = new ContentVersion();
@@ -37,8 +38,7 @@ public without sharing class coreDocuments
         }
       }
 
-      private static ContentDocumentLink createContentLink(String contentVersionId, String recordId)
-        {
+    private static ContentDocumentLink createContentLink(String contentVersionId, String recordId){
             if (contentVersionId == null || recordId == null) { return null; }
                 ContentDocumentLink cdl = new ContentDocumentLink();
                 cdl.ContentDocumentId = [
