@@ -47,6 +47,7 @@ export default class CoreDocuments extends LightningElement {
             this.fileData = null
             let title = `${filename} uploaded successfully!!`
             this.toast(title)
+            this.refreshDataTable();
         })
     }
 
@@ -56,6 +57,12 @@ export default class CoreDocuments extends LightningElement {
             variant: "success"
         })
         this.dispatchEvent(toastEvent)
+    }
+
+    async refreshDataTable() {
+        await getDocuments({ idObject: this.recordId }).then(result => {
+            this.data = data;
+        })
     }
 
 }
