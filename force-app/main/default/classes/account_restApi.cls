@@ -9,5 +9,4 @@ global with sharing class account_restApi
         string NameAccount = req.requestURI.substring(req.requestURI.lastIndexOf('/')+1);
         return [Select Id, Name, Phone From Account Where Name = :NameAccount];
     }
-    
 }
