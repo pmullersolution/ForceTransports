@@ -26,7 +26,7 @@ export default class CoreDocuments extends LightningElement {
         }
     }
 
-    openfileUpload(event) {
+    openfileUpload(event) { //evento de cuando sube el archivo
         const file = event.target.files[0]
         var reader = new FileReader()
         reader.onload = () => {
@@ -41,17 +41,17 @@ export default class CoreDocuments extends LightningElement {
         reader.readAsDataURL(file)
     }
 
-    handleClick() {
+    handleClick() { //click de submit
         const { base64, filename, recordId } = this.fileData
         uploadFile({ base64, filename, recordId }).then(result => {
             this.fileData = null
             let title = `${filename} uploaded successfully!!`
             this.toast(title)
-            this.refreshDataTable();
+            this.refreshDataTable(); //refresa el data table basado en su id
         })
     }
 
-    toast(title) {
+    toast(title) { //mensaje d eok 
         const toastEvent = new ShowToastEvent({
             title,
             variant: "success"
@@ -59,8 +59,13 @@ export default class CoreDocuments extends LightningElement {
         this.dispatchEvent(toastEvent)
     }
 
+<<<<<<< HEAD
     refreshDataTable() {
         getDocuments({ idObject: this.recordId }).then(result => {
+=======
+    async refreshDataTable() { //refresca la tabla
+        await getDocuments({ idObject: this.recordId }).then(result => {
+>>>>>>> 843ce3728f867780442ccbfb660f3a078525584e
             this.data = data;
         })
     }
