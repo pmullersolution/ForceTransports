@@ -1,3 +1,6 @@
+Mi idea consiste en dos aplicaciones una para administrador y la otra para Ejecutivo de Venta. La aplicacion Administrador (FORCE TRANSPORTS) cuenta con acceso a la mayoria de los recuros , mientras que el ejecutivo de Ventas tiene acceso solo a su aplicacion. En el video solo muestro la aplicacion de administracion , ya que 
+la mayoria de funciones se encuentran en esta.
+
 Fundamental Leer este readme con la documentacion necesaria donde podra encontrarse la configuracion para Deployar la aplicacion , de igual manera , adjunto enlace a 
 video de presentacion.Sepan disculpar la prolijidad del mismo , ya que no cuento con Licencias para el software utilizado.
 
@@ -24,7 +27,10 @@ Detalle_factura__c
 Lead
 Opportunity
 Maintenance Request(CASE)
-
+## OBJETOS APLICACION PARA EL EJECUTIVO DE VENTAS 
+Inconvenientes__c
+Consultas__c
+Maintenance Request(CASE)
 
 ## Flows utilizados en app Force Transports
  case_alert.flow
