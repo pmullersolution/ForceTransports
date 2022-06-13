@@ -1,3 +1,11 @@
+Fundamental Leer este readme con la documentacion necesaria donde podra encontrarse la configuracion para Deploya la aplicacion.
+
+Nubes utilizadas 
+
+Git:https://github.com/pmullersolution/ForceTransports
+
+Salesforce:Sales
+
 # Objetos Prototipo Force Transports
 Vehiculo__c
 Viajes_Individuales__c
