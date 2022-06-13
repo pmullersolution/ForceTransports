@@ -1,4 +1,4 @@
-Fundamental Leer este readme con la documentacion necesaria donde podra encontrarse la configuracion para Deploya la aplicacion.
+Fundamental Leer este readme con la documentacion necesaria donde podra encontrarse la configuracion para Deployar la aplicacion.
 
 Nubes utilizadas 
 
