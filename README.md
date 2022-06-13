@@ -1,18 +1,49 @@
-# Salesforce DX Project: Next Steps
+# Objetos Prototipo Force Transports
+Vehiculo__c
+Viajes_Individuales__c
+Account
+Contactabilidad__c
+Email__c
+EmailMessage
+Factura__c
+Detalle_factura__c
+Lead
+Opportunity
+Maintenance Request(CASE)
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
-## How Do You Plan to Deploy Your Changes?
+## Flows utilizados en app Force Transports
+ case_alert.flow
+ create_property.flow
+ detalle_factura.flow
+ Estado_en_Cuenta.flow
+ Factura_pag.flow
+ flo_lead.flow
+ flow_de_contactabilidad.flow
+ flow_opportunity.flow
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
-## Configure Your Salesforce DX Project
+## Roles utilizado y Perfiles 
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Perfiles:Administrador y Salesforce platform
+Roles:Ceo , Ejecutivo de ventas , jefe Comercial
 
-## Read All About It
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Dashboards y reportes
+Dashboardprototipo
+
+## web component
+<>form.html(formulario)
+{}launch.json
+
+## nubes utilizadas 
+nube de Salesforce( Sales )
+file:///C:/Users/PabloMuller/Documents/GitHub/dev401v3/form.html (para formulario)
+
+## Email templates y Alertas
+Factura_Paga
+Facturas
+opportunidad creada
+
+Alertas: 	Factura(Descripcion) 	Template Name(Facturas)	Objeto (Factura)
+            opportunity(Descripcion) Template Name(opportunidad creada) objeto (Opportunity)
