@@ -1,4 +1,7 @@
-Fundamental Leer este readme con la documentacion necesaria donde podra encontrarse la configuracion para Deployar la aplicacion.
+Fundamental Leer este readme con la documentacion necesaria donde podra encontrarse la configuracion para Deployar la aplicacion , de igual manera , adjunto enlace a 
+video de presentacion.Sepan disculpar la prolijidad del mismo , ya que no cuento con Licencias para el software utilizado.
+
+https://drive.google.com/file/d/1q2B6TFjKQmRTLmNbzFUyT9eD_eNtkRS_/view?usp=sharing
 
 Nubes utilizadas 
 
